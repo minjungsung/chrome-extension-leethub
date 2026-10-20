@@ -48,6 +48,6 @@
     "chrome-remote-interface": "^0.34.0",
     "esbuild": "^0.28.2",
     "jsdom": "^28.1.0",
-    "vitest": "^4.1.11"
+    "vitest": "^5.0.5"
   }
 }

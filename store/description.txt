@@ -1,0 +1,21 @@
+LeetHub automatically saves accepted LeetCode solutions and problem descriptions to a GitHub repository you choose. Keep your coding practice organized without manually copying each solution.
+
+GET STARTED
+Connect GitHub, select an initialized repository, and enable auto upload. Submit an accepted solution on LeetCode, then open View latest solution to check the files on GitHub.
+
+It retrieves the code from the actual accepted submission, then commits the source file and problem README to the repository's default branch. Identical source and README files are skipped. Non-forced branch updates preserve other changes when uploads happen concurrently.
+
+Features:
+- Detect new accepted LeetCode submissions automatically.
+- Upload an older accepted submission by opening its detail page or entering its ID or URL.
+- Organize solutions by platform or language file extension.
+- View synchronized-problem counts and difficulty totals.
+- Pause uploads, change the repository, and inspect the latest uploaded solution.
+
+Setup requires signing in to LeetCode and providing a fine-grained GitHub token with Contents read and write access to one initialized repository. Linking an existing repository is recommended. Creating a new private repository requires additional GitHub permission.
+
+The token stays in local extension storage and is used only for GitHub API requests. LeetHub has no developer-operated analytics or data collection server.
+
+Supported platform: LeetCode. Recommendations, offline practice, other coding platforms, and bulk submission-history import are not included.
+
+LeetHub is an independent project and is not affiliated with LeetCode or GitHub.

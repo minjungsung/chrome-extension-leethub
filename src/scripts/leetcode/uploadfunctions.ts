@@ -3,6 +3,7 @@ import { sha1 } from 'js-sha1'
 import { GitHub, GitHubError } from '../github'
 import { LeetcodeData } from '../../types/LeetcodeData'
 import { getStats } from '../storage'
+import { recordReviewUse } from '../review'
 
 export function languageExtension(language: string): string {
   const key = language.toLowerCase().replace(/\s+/g, '')
@@ -72,5 +73,6 @@ export async function uploadOneSolveProblemOnGit(data: LeetcodeData): Promise<{ 
     runtime: data.runtime, memory: data.memory, submissionId: data.submissionId
   }
   await browser.storage.local.set({ stats, lastUpload: { submissionId: data.submissionId, url, duplicate }, lastError: null })
+  if (!duplicate) await recordReviewUse()
   return { url, duplicate }
 }

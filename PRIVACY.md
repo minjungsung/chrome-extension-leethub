@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Effective date: October 15, 2026.
+Effective date: October 21, 2026.
 
 LeetHub synchronizes accepted LeetCode submissions to a GitHub repository selected by the user. It does not operate an analytics service or a developer-controlled server that receives user data.
 
@@ -11,6 +11,10 @@ The extension stores a user-provided GitHub token, GitHub account name, selected
 The extension uses the browser's existing LeetCode session to retrieve selected accepted submission details, including submitted source code, problem information, language, runtime, and memory. It observes completion of LeetCode submission-check requests to identify submissions. It does not record general browsing history or requests outside LeetCode.
 
 Submitted source code and problem information are sent to GitHub to create files and commits in the selected repository. A public repository makes these files publicly accessible. The user chooses the repository and can pause uploads, unlink it, or remove the extension.
+
+## Optional feedback
+
+Successful upload counts, activity dates, and a notice-dismissal preference are stored locally. After five successful uploads across three days spanning at least one week, the popup may show an optional, one-time request for an honest store review. A review link is always available, regardless of usage or satisfaction. No feedback telemetry is sent to the developer.
 
 ## Sharing and retention
 

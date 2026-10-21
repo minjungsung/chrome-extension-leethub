@@ -70,3 +70,5 @@ input:not([type=checkbox]),select { display: block; width: 100%; min-height: 40p
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 @media (prefers-reduced-transparency: reduce) { .icon-button,.code-art,.flow-source,.flow-destination { backdrop-filter: none; background: #fff; } }
 @media (prefers-contrast: more) { :root { --muted: #47474c; --line: #0003; }.small-muted,.field-hint,.popup-footer { color: #47474c; }.repository-card,.progress-card,.manual-card { border: 1px solid #0003; } }
+
+.review-card{padding:10px 12px;margin-top:8px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:11px;line-height:1.5}.review-card p{margin:0 0 6px}.review-card a{margin-right:12px}.review-card button{font-size:11px;padding:4px 8px}.popup-footer a{margin-left:8px}

@@ -2,6 +2,16 @@
 
 LeetHub is a Chrome Manifest V3 extension that uploads accepted LeetCode submissions to a selected GitHub repository. It fetches the actual submitted source and language from LeetCode instead of reading editor or problem-statement DOM elements.
 
+## See it work
+
+![Guided workflow demo](store/demo/walkthrough.gif)
+
+[Video and disclosure](store/demo/README.md). Actual UI with fictional data and simulated upload responses; this demo does not perform a live GitHub write.
+
+## Feedback
+
+The popup always links to honest Chrome Web Store reviews. An optional, dismissible notice appears after repeated successful uploads across at least one week. Feedback preferences stay on your device and do not affect features.
+
 ## Supported features
 
 - Automatic detection of completed LeetCode submission checks while the extension is installed.

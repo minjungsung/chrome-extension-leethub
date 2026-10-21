@@ -1,8 +1,8 @@
 # Chrome Web Store listing
 
-Name: LeetHub
+Name: LeetHub: LeetCode to GitHub Sync
 
-Short description: Sync accepted LeetCode submissions to a selected GitHub repository.
+Short description: Automatically save accepted LeetCode solutions and problem descriptions to GitHub. Organize your coding practice in your own repo.
 
 Suggested category: Developer Tools
 
@@ -10,7 +10,10 @@ Language: English
 
 ## Detailed description
 
-LeetHub saves your accepted LeetCode solutions to a GitHub repository you choose.
+LeetHub automatically saves accepted LeetCode solutions and problem descriptions to a GitHub repository you choose. Keep your coding practice organized without manually copying each solution.
+
+GET STARTED
+Connect GitHub, select an initialized repository, and enable auto upload. Submit an accepted solution on LeetCode, then open View latest solution to check the files on GitHub.
 
 It retrieves the code from the actual accepted submission, then commits the source file and problem README to the repository's default branch. Identical source and README files are skipped. Non-forced branch updates preserve other changes when uploads happen concurrently.
 

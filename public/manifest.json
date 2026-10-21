@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "LeetHub",
+  "name": "LeetHub: LeetCode to GitHub Sync",
   "short_name": "LeetHub",
-  "description": "Sync accepted LeetCode submissions to a selected GitHub repository.",
-  "version": "1.0.9",
+  "description": "Automatically save accepted LeetCode solutions and problem descriptions to GitHub. Organize your coding practice in your own repo.",
+  "version": "1.0.10",
   "action": {
     "default_icon": {
       "16": "assets/icon-16.png",

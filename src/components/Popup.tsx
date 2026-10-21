@@ -3,6 +3,7 @@ import browser from 'webextension-polyfill'
 import { WELCOME_URL } from '../constants/Url'
 import { Stats } from '../types/Stats'
 import Icon from './Icon'
+import { eligibleReview, REVIEW_URL } from '../scripts/review'
 import { emptyStats } from '../scripts/storage'
 
 const Popup: React.FC = () => {
@@ -28,6 +29,10 @@ const Popup: React.FC = () => {
       setMessage(result.skipped ? 'Upload skipped. Enable auto upload and use an accepted submission.' : result.duplicate ? 'This solution is already uploaded.' : 'Solution uploaded.')
     } catch (error) { setMessage(error instanceof Error ? error.message : 'Upload failed') }
     finally { setBusy(false) }
+  }
+  const dismissReview = async () => {
+    setData(current => ({...current, reviewPrompt: {...current.reviewPrompt, handled: true}}))
+    try { await browser.storage.local.set({reviewPrompt: {...data.reviewPrompt, handled: true}}) } catch { /* Optional feedback. */ }
   }
   const enabled = data.bjhEnable === true
   return <main className='popup'>
@@ -68,7 +73,12 @@ const Popup: React.FC = () => {
     </section>}
     {data.lastError && <p className='feedback error' role='alert'>{data.lastError}</p>}
     <p className={`feedback ${message ? 'visible' : ''}`} role='status'>{message}</p>
-    <footer className='popup-footer'><Icon name='lock' />Stored in your GitHub repository</footer>
+    {eligibleReview(data.reviewPrompt) && <aside className='review-card' aria-label='Optional feedback'>
+      <p>Have a moment? Share an honest review on the Chrome Web Store.</p>
+      <a href={REVIEW_URL} target='_blank' rel='noopener noreferrer' onClick={() => { void dismissReview() }}>Write a review</a>
+      <button type='button' onClick={() => { void dismissReview() }}>Dismiss</button>
+    </aside>}
+    <footer className='popup-footer'><Icon name='lock' />Stored in your GitHub repository <a href={REVIEW_URL} target='_blank' rel='noopener noreferrer'>Review</a></footer>
   </main>
 }
 export default Popup

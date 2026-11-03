@@ -43,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@types/chrome": "^0.3.6",
+    "@types/chrome": "^0.3.7",
     "@types/jquery": "^4.0.1",
     "chrome-remote-interface": "^0.34.0",
     "esbuild": "^0.28.2",

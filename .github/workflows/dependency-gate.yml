@@ -13,11 +13,11 @@ jobs:
   validate-dependencies:
     permissions:
       contents: read
-    uses: minjungsung/.github/.github/workflows/dependency-validation.yml@48ea7dbbf740a846200241dd1bee2cd9c60cd078
+    uses: minjungsung/.github/.github/workflows/dependency-validation.yml@af3f8dcc418d8b440407e288e7b1a486bd258fa9
     with:
       pr-author: dependabot[bot]
       projects-json: '[{"name":"root-node","ecosystem":"npm","path":".","runtime-version":"20","manifest":"package.json","lockfile":"package-lock.json","timeout-minutes":15}]'
-      policy-ref: 48ea7dbbf740a846200241dd1bee2cd9c60cd078
+      policy-ref: af3f8dcc418d8b440407e288e7b1a486bd258fa9
 
   dependency-gate:
     name: dependency-gate
